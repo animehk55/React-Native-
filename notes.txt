@@ -26,7 +26,12 @@ npm i eslint-config-rallycoding
     "extends": "rallycoding"
 }
 *********************************************************************************************************************
-
+Whenever we want to pass a data from  a parent/root component to a child component, we use the props(property) 
+system
+*******************************************************************************************************************
+class based component has a unique advantage over functional components called "life cycle methods", Life cycle 
+methods are functions that will be placed on our class that will be automatially called at some point, one 
+such life cycle methods is called "componentWillMount"  
 
 
 
