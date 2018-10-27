@@ -5,15 +5,28 @@ import Header from './src/components/header';
  const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
+    'for android version below 5 :\n' +
+    'https://stackoverflow.com/questions/31525431/getting-error-closed-twice-on-adb-reverse/41640115#41640115 \n' +
+
+    'You can also connect to the development server over Wi-Fi. You will first need to install the app on your device' +
+    'using a USB cable, but once that has been done you can debug wirelessly by following these instructions. You will' +
+    'need your development machines current IP address before proceeding.' +
+    'You can find the IP address in System Preferences → Network' +
+
+    'Make sure your laptop and your phone are on the same Wi-Fi network.' +
+    'Open your React Native app on your device. You will see a red screen with an error.' +
+    'This is OK. The following steps will fix that. Open the in-app Developer menu. Go to Dev Settings → Debug server' + 
+    'host for device. Type in your machines IP address and the port of the local dev server (e.g. 10.0.1.1:8081).' +
+    'Go back to the Developer menu and select Reload JS.'
+
+    
 });
  type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Header />
+        <Header headerText={'Hello World'} />
         <Text style={styles.welcome}>Homepage</Text>
         <Text style={styles.instructions}>{instructions}</Text>
       </View>
@@ -26,7 +39,7 @@ export default class App extends Component<Props> {
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white',
-    marginTop: -500
+    marginTop: 0 
   },
   welcome: {
     fontSize: 20,
