@@ -25,16 +25,18 @@ export default class App extends Component<Props> {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: 'white',
+    marginTop: -500
   },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
+    color: 'pink'
   },
   instructions: {
     textAlign: 'center',
-    color: '#333333',
+    color: 'green',
     marginBottom: 5,
   },
 });
