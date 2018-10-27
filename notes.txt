@@ -34,7 +34,26 @@ methods are functions that will be placed on our class that will be automatially
 such life cycle methods is called "componentWillMount". So we define a method on a class specifically 
 "componentWillMount" anytime that our component is to be rendered to the screen of our device, this method will
 automatically be executed automatically be called for us.
-   
+
+ componentWillMount() {
+        console.log("ComponentWillMount in Album List");
+        debugger;
+    }
+
+automatically debugger will move done to the text debugger in console, and if we write this in console then it will 
+show : 
+        AlbumList {props: {…}, context: {…}, refs: {…}, updater: {…}, _reactInternalFiber: FiberNode, …}
+
+
+*******************************************************************************************************************
+componentWillMount is called instantaneous component is about to be placed on the screen of the mobal device, 
+which makes it the fantastic location to start initiating some data loading process for application.
+
+npm install --save axios
+--> sole purpose of axios for us is make http request to fetch some data.
+
+
+
 
 
 
