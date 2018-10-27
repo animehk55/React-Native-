@@ -31,7 +31,10 @@ system
 *******************************************************************************************************************
 class based component has a unique advantage over functional components called "life cycle methods", Life cycle 
 methods are functions that will be placed on our class that will be automatially called at some point, one 
-such life cycle methods is called "componentWillMount"  
+such life cycle methods is called "componentWillMount". So we define a method on a class specifically 
+"componentWillMount" anytime that our component is to be rendered to the screen of our device, this method will
+automatically be executed automatically be called for us.
+   
 
 
 
