@@ -62,9 +62,14 @@ Two ways to represnt data fetching :
         albums: [
             { name: 'asdf' },
             { name: 'lkalpq' }
-        ]
+        ] 
     };
 
+******************************************************************************************************************
+1. Setting up default/initial state: class level property
+    state = {};
+
+2. 
 
 
 
