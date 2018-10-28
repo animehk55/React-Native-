@@ -51,6 +51,19 @@ which makes it the fantastic location to start initiating some data loading proc
 
 npm install --save axios
 --> sole purpose of axios for us is make http request to fetch some data.
+********************************************************************************************************************
+component state: state is how react handles changing the content that is shown on the screen.
+
+Two ways to represnt data fetching :
+1. Not have data
+    state = { albums: [] }
+2. Have data 
+    state = { 
+        albums: [
+            { name: 'asdf' },
+            { name: 'lkalpq' }
+        ]
+    };
 
 
 
