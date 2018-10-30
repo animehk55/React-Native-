@@ -14,21 +14,6 @@ const AlbumDetail = (props) => {
                     {props.album.title}
                 </Text>
             </CardSection>
-            <CardSection>
-                <Text>
-                    {props.album.title}
-                </Text>
-            </CardSection>
-            <CardSection>
-                <Text>
-                    {/* {props.album.title} */}
-                </Text>
-            </CardSection>
-            <CardSection>
-                <Text>
-                    {props.album.title}
-                </Text>
-            </CardSection>
         </Card>
     );
 };
