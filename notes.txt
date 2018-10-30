@@ -34,7 +34,78 @@ methods are functions that will be placed on our class that will be automatially
 such life cycle methods is called "componentWillMount". So we define a method on a class specifically 
 "componentWillMount" anytime that our component is to be rendered to the screen of our device, this method will
 automatically be executed automatically be called for us.
-   
+
+ componentWillMount() {
+        console.log("ComponentWillMount in Album List");
+        debugger;
+    }
+
+automatically debugger will move done to the text debugger in console, and if we write this in console then it will 
+show : 
+        AlbumList {props: {…}, context: {…}, refs: {…}, updater: {…}, _reactInternalFiber: FiberNode, …}
+
+
+*******************************************************************************************************************
+componentWillMount is called instantaneous component is about to be placed on the screen of the mobal device, 
+which makes it the fantastic location to start initiating some data loading process for application.
+
+npm install --save axios
+--> sole purpose of axios for us is make http request to fetch some data.
+********************************************************************************************************************
+component state: state is how react handles changing the content that is shown on the screen.
+
+Two ways to represnt data fetching :
+1. Not have data: empty list of albums
+    state = { albums: [] }
+2. Have data 
+    state = { 
+        albums: [
+            { name: 'asdf' },
+            { name: 'lkalpq' }
+        ] 
+    };
+
+******************************************************************************************************************
+1. Setting up default/initial state: class level property
+    state = {};
+
+    ---------------
+    state = { albums: [] };
+
+2.  getting the values of data from response.data as seen in console then applied
+
+    .then(response => this.setState({ albums: response.data }));
+**********************************************************************************************************************
+Rules of State:
+# Definitionn of state : a plain javascript objet used to record and respond to user-tiggered events.
+# When we need to update what a component shows, call 'this.setState'
+# Only change state with 'setState', do not do 'this.state'
+----------------
+Different between state and props: 
+Whenever we want to communicate from a parent component to a child component, we use props. So props is for parent
+to child communication.
+
+State on the other hand is for components internal record keeping that is the purpose of state, we use state whenever 
+we want to  update some amount of data over time.And whenever we pass a data from parent to child then it is props.
+
+We use state only with class based components. Any functional components does not have access to states.
+
+
+*******************************************************************************************************************
+map is an array helper, I get to call this on this.state.albums "this.state.albums .map()" because here album is 
+an array. The way the map works is we pass in a "fat array function" then "fat array function" will be called 5 times,
+one for each album that we have loaded, whatever we return from that function will be entered into a new array
+that gets retuned from the map function.
+
+renderAlbums() {
+        return this.state.albums.map(album => <Text>{album.title}</Text>);
+    }
+----------------
+{this.renderAlbums()}
+
+
+
+
 
 
 
